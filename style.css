@@ -1,36 +1,29 @@
+body {
+    background-size: cover;
+}
+
 .heading {
+    font-size: 23px;
     width: 100%;
-    text-align: left;
-}
-
-.heading h3 {
-    display: inline;
-}
-
-.heading button {
-    float: right;
-    border: 1px solid white;
-}
-
-.big_image {
-    width: 100%;
-}
-
-#start, #status {
-    font-size: 22px;
-}
-
-h4, footer {
-    background-color: white;
-    line-height: 2;
     margin: 0px;
 }
 
-.modal-dialog {
-    width: 90%;
+#start, #numberofobjects, #status {
+    font-size: 18px;   
 }
 
-.instruction_image {
-    display: inline-block;
-    width: 45%;
+.copyright-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+canvas {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 130px;
+    box-shadow: 5px 5px 5px white;
 }

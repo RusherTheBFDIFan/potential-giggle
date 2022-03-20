@@ -1,39 +1,19 @@
-objects = [];
-results = [];
-rightwristx = 0;
-rightwristy = 0;
-rightwristscore = 0;
-function gotResults(error, results){
-    if (error){
-        console.log(error);
-    }
-    console.log(results);
-    objects = results;
-}
+cocossd = ""
 
 function setup() {
-	canvas = createCanvas(600, 400);
-  canvas.center();
-  video = createCapture(VIDEO);
-}
-  
-function draw() {
-	image(video, 0, 0, 480, 380);
-  circle(rightwristx, rightwristy, 400, 400)
-}
-
-function modelLoaded() {
-  console.log("Model loaded.")
+    canvas = createCanvas(480, 380);
+    canvas.center();
+    video = createCapture(VIDEO);
 }
 
 function start() {
-  objectDetector = ml5.objectDetector('poseNet', modelLoaded);
+  objectDetector = ml5.objectDetector('cocossd', modelLoaded);
 }
 
-function gotPoses(results) {
-   if (results != []){
-    console.log(results)
-    rightwristx = results[0].pose.rightwrist.x;
-    rightwristy = results[0].pose.rightwrist.y;
-   }
+function modelLoaded() {
+    console.log("Model Loaded")
+}
+
+function draw() {
+    image(video, 0, 0, 480, 380);
 }
